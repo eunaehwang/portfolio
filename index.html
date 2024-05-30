@@ -404,19 +404,25 @@
         <h2 class="section__title">contact</h2>
 
         <div class="contact__container container">
-          <form id="contactForm" class="contact__form">
+          <form
+            id="contactForm"
+            class="contact__form gform"
+            method="POST"
+            data-email="euuuunae@gmail.com"
+            action="https://script.google.com/macros/s/AKfycbyUbjWfwmJeYcaWPJwBky52ZoR3ldAyr_0Kc0YeNvd9tW1IORSV1I7TrSDl48LJkrRClg/exec"
+          >
             <input
               class="contact__input"
-              type="text"
-              name="name"
-              placeholder="이름"
+              type="email"
+              name="email"
+              placeholder="이메일 주소"
               required
             />
             <input
               class="contact__input"
               type="text"
-              name="subject"
-              placeholder="제목"
+              name="name"
+              placeholder="이름"
               required
             />
             <textarea
@@ -428,7 +434,13 @@
               placeholder="내용"
               required
             ></textarea>
-            <button class="contact__button button">보내기</button>
+            <button
+              class="contact__button button"
+              type="submit"
+              form="contactForm"
+            >
+              보내기
+            </button>
           </form>
         </div>
       </section>
